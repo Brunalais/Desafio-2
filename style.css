@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 100;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top left, rgb(88, 94, 100), rgb(232, 235, 235));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", serif, rgb(26, 28, 31);
+
+    
+}
+.container {
+    padding: 1.5em;
+}
+header {
+    width: 100%;
+    height: 8em;
+    background: rgb(112, 80, 172);
+    color: #fff;
+    box-shadow: 0 24px 26px var(box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header #logo {
+    font-size: 1.3rem;
+}
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    cursor: pointer;
+    padding: 1em 5em;
+    border-radius: 12px;
+    border: none;
+    margin:  8em 4em 0;
+    background: none;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', serif;
+    color: var(font-family);
+    box-shadow:
+        10px 10px 30px,
+        -10px -10px 30px ,
+        inset 10px 10px 30px,
+        inset -10px -10px 30px;
+}
+    
+   
+#modalCliente {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform:translateY(5em);
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+#modalCliente.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+#modalProduto {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5em);
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+#modalProduto.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.modal {
+    position: relative;
+    width: 50em;
+    padding: 3em;
+    border-radius: 2em;
+    background: var(background);
+    box-shadow: 10px 10px 30px var, 0 0 0 500em, rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btnFechar {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    font-family: 'Montserrat', sans-serif, rgba(0,0,0,0.5);
+    font-weight: 700;
+    padding: .7em 1em;
+    border-radius: 10em;
+    border: none;
+    background: rgb(230, 21, 32);
+    color: white;
+    cursor: pointer;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 2em 0;
+}
+input {
+    font-family: 'Montserrat', sans-serif, rgba(0,0,0,0.5);
+    padding: 0.7em;
+    width: 45%;
+    border: none;
+    border-radius: 5em;
+    background: rgb(179, 235, 230);
+    box-shadow: -5px -5px 10px var(lighting-color),
+                5px 5px 10px;
+}
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em;
+    border: none;
+    border-radius: 1.5em;
+    background: rgb(177, 212, 226);
+    box-shadow: 5px -5px 10px var(lighting-color),
+                5px 5px 10px;
+}
+.btnCad {
+    margin: 0;
+    padding: .7em 3em;
+    box-shadow: none;
+    background: rgb(12, 12, 12);
+    color: white;
+}
+footer{
+    line-height: 10;
+    height: 30px;
+    padding: 100px;
+    text-align: center;
+    color: rgb(0, 0, 0)
+}
